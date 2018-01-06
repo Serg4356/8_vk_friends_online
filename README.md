@@ -1,6 +1,6 @@
 # Watcher of Friends Online
 
-[TODO. There will be project description]
+Programm searches for friends who are online in [Vkontakte]https://vk.com and displays list of their first and last names in concole.
 
 # How to Install
 
@@ -11,6 +11,17 @@ pip install -r requirements.txt # alternatively try pip3
 ```
 
 Remember, it is recommended to use [virtualenv/venv](https://devman.org/encyclopedia/pip/pip_virtualenv/) for better isolation.
+
+Example of programm output:
+
+```bash
+$ python vk_friends_online.py
+Enter login: some_login
+Password: # Prompt the user for a password without echoing
+Friends online:
+Ivan Ivanov
+Petr Petrov
+```
 
 # Project Goals
 
