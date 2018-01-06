@@ -23,9 +23,10 @@ def get_online_friends(login, password):
     )
     api = vk.API(session)
     friends_info = []
+    sleep_until_request = 0.3
     for friend in api.friends.getOnline():
         friends_info.append(api.users.get(user_id=friend))
-        time.sleep(0.3)
+        time.sleep(sleep_until_request)
     return friends_info
 
 
