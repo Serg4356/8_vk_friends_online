@@ -22,12 +22,7 @@ def get_online_friends(login, password):
         scope='friends'
     )
     api = vk.API(session)
-    friends_online = [
-        friend_online
-        for friend_online
-        in api.friends.get(fields='online')
-        if not friend_online['online'] == 0
-    ]
+    friends_online = api.users.get(user_ids=api.friends.getOnline())
     return friends_online
 
 
