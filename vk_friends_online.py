@@ -22,18 +22,18 @@ def get_online_friends(login, password):
         scope='friends'
     )
     api = vk.API(session)
-    friends_info = []
-    sleep_until_request = 0.3
-    for friend in api.friends.getOnline():
-        friends_info.append(api.users.get(user_id=friend))
-        time.sleep(sleep_until_request)
-    return friends_info
+    friends = api.friends.get(fields='online')
+    friends_online =[]
+    for friend in friends:
+        if friend['online'] == 1:
+            friends_online.append('{} {}'.format(friend['first_name'], friend['last_name']))
+    return friends_online
 
 
 def output_friends_to_console(friends_online):
     print('Friends online:')
     for friend in friends_online:
-        print(friend[0]['first_name'], friend[0]['last_name'])
+        print(friend)
 
 
 if __name__ == '__main__':

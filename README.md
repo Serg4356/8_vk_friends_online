@@ -1,6 +1,6 @@
 # Watcher of Friends Online
 
-Programm searches for friends who are online in [Vkontakte]https://vk.com and displays list of their first and last names in concole.
+Programm searches for friends who are online in [Vkontakte](https://vk.com) and displays list of their first and last names in concole.
 
 # How to Install
 
